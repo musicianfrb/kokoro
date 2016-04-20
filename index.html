@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>kokoto</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="estilo.css">
+	<link href='https://fonts.googleapis.com/css?family=Arimo|Dosis|Handlee|Amaranth' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+</head>
+<body ng-controller="AppController" >
+	<nav class="Menu">
+		<ul class="Menu-Content">
+			<li class="Menu-Items">
+				<a href="#" ui-sref="Inicio" ui-sref-active="activo"  ng-click="CambioUrl('Inicio')" class="Menu-Links" enlace>
+					<span class="icon-corazon"></span>
+				</a>
+			</li>
+			<li class="Menu-Items">
+				<a href="#" ui-sref="Mensaje" ui-sref-active="activo" ng-click="CambioUrl('Mensaje')"  class="Menu-Links" enlace> 
+					<span class="icon-book"></span> 
+				</a>
+			</li>
+			<li class="Menu-Items">
+				<a href="#" ui-sref="Video" ui-sref-active="activo" ng-click="CambioUrl('Video')"  class="Menu-Links">
+					<span class="icon-youtube2"></span> 
+				</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<section   ui-view class="ContenedorVistas" ng-class="TipoVista">
+
+		
+		
+	</section>
+
+	<script src="app.js"></script>
+
+	
+	
+</body>
+</html>

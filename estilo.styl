@@ -1,0 +1,227 @@
+@import nib
+devil =  #B42529
+devil2 =  #FA7F77
+devil3 =  #F7A398
+devil4 =  #F6C7B7
+negro =  #000
+blanco = #fff
+amarillo = #FFFEC8
+
+*
+	margin 0
+	font-family "arial"
+	padding 0
+	box-sizing border-box
+	
+.cuadrado
+	width 10%
+	//display none
+	transition 5s
+	&.rotar
+		transform rotate(360deg)
+	&:after
+		content ""
+		padding-top 100%
+		display block
+	&.rojo
+		background-color devil
+	&.negro
+		background-color negro
+	&.blanco
+		background-color devil4
+		
+body
+	background-color devil4
+.Contenedor
+	background-color devil4
+	width 100vw
+	flex-direction column
+	height 100vh
+	display flex
+	justify-content center
+	align-items center
+	padding-top 50px
+	
+
+.Corazon
+	display flex
+	justify-content center
+	align-items center
+	width 50%
+	position relative
+	&.startLatido
+		animation latido 2s infinite
+	&-Play
+		outline none
+		margin-top 30px
+		cursor pointer
+		height 0px
+		background-color devil3
+		width 0px
+		border none
+		border-radius 50%
+		display flex 
+		transition width 0.3s
+		overflow hidden
+		transition height 0.3s
+		justify-content center
+		align-items center
+		border 1px solid #fa7f77
+		box-shadow inset 0 -5px devil2, 0px -1px 1px rgba(0,0,0,0.09)
+		&.show
+			height 45px
+			width 45px
+		span 
+			font-size 20px
+			margin-bottom 3px
+			margin-left 5px
+			color devil
+			&.margin-left
+				margin-left 1px
+				margin-bottom 8px
+		&:hover
+			box-shadow inset 0px -45px devil2
+			span
+				margin-bottom 0px
+				color blanco
+@-webkit-keyframes latido
+	0%{
+		width 50%
+	}
+	25%{
+		width 55%
+	}
+	30%{
+		width 53%
+	}
+	50%{
+		width:50%
+	}
+	75%{
+		width 60%
+	}
+	100%{
+		width 50%
+	}	
+	
+.Menu
+	//display none
+	background-color devil2
+	position fixed
+	width 100%
+	z-index 1
+	&-Content
+		width 100%
+		display flex
+	&-Items
+		list-style none
+		flex auto
+		&:not(:last-child) .Menu-Links:after
+			content ""
+			height 18px
+			width 2px
+			background-color devil4
+			position absolute
+			right 0
+			top 0
+			bottom 0
+			margin auto
+	&-Links
+		text-align center
+		line-height 40px
+		height 40px
+		display block
+		color blanco
+		text-decoration none
+		font-weight bold
+		position relative
+		font-size 16px
+		transition 0.3s
+		&.activo
+			font-size 20px
+			box-shadow inset 0px -5px 0px devil3
+			line-height 35px
+			&:after
+				top  -5px !important
+			
+		
+				
+.Inicio.ng-enter,[ui-view].ng-leave
+	opacity 0
+	position absolute
+	transition 1s
+	top -100%
+	width 100%
+
+.Inicio.ng-enter-active
+	opacity 1
+	position absolute
+	top 0%
+	width 100%
+	
+
+.Mensaje.ng-enter,[ui-view].ng-leave
+	opacity 0
+	position absolute
+	transition 1s
+	bottom -100%
+	width 100%
+
+.Mensaje.ng-enter-active
+	opacity 1
+	position absolute
+	bottom 0%
+	width 100%
+	
+.Texto
+	font-family: 'Dosis', sans-serif;
+.Carta
+	background devil3
+	box-shadow 0px 1px 2px rgba(0,0,0,0.2)
+	padding 20px
+	border-radius 3px
+	width 85% 
+	margin-top 10px
+	position relative
+	&:after
+		background linear-gradient(-135deg, white 45%, #aaa 50%, #ccc 60%, white)
+		border-top-right-radius 4px
+		content ""
+		height 25px
+		position absolute	
+		right 0
+		top 0
+		width 25px
+	&-Titulo
+		font-family: 'Amaranth', sans-serif
+		font-size 20px
+		margin-bottom 10px
+		margin-top -10px
+	&-Letra
+		font-family: 'Amaranth', sans-serif
+		font-size: 22px
+		margin-right: 3px
+	&-Contenido
+		text-align justify
+		line-height 20px
+		background-color blanco
+		box-shadow inset 0 1px 7px 1px rgba(negro,0.2)
+		padding 10px
+		font-size 16px
+		overflow auto
+		max-height 70vh
+		width 100%
+		p
+			&:not(:first-child)
+				margin-top 10px
+	
+	
+.Video2
+	background-color devil3
+	box-shadow 0px 2px 2px rgba(negro,0.2)
+	border-radius 4px
+	width 85%
+	padding 20px
+	iframe
+		box-shadow 0px 2px 4px rgba(negro,0.2)
+		width 100%
