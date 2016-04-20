@@ -33,8 +33,12 @@ modulo.directive("rotacion",function($timeout){
 		link:function(scope,ele,attrs){
 
 			$timeout(function(){
-				ele.find(".cuadrado").toggleClass("rotar");
+				ele.find(".cuadrado").addClass("rotar");
 			},1000)
+			$timeout(function(){
+				ele.find(".cuadrado").removeClass("rotar");
+			},3000)
+
 		}
 	}
 })
