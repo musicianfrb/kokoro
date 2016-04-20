@@ -34,10 +34,8 @@ modulo.directive("rotacion",function($timeout){
 
 			$timeout(function(){
 				ele.find(".cuadrado").addClass("rotar");
+				$(".Corazon-Titulo").addClass("activo");
 			},1000)
-			$timeout(function(){
-				ele.find(".cuadrado").removeClass("rotar");
-			},3000)
 
 		}
 	}
@@ -47,7 +45,7 @@ modulo.directive("latido",function($timeout){
 		link:function(scope,ele,attrs){
 			$timeout(function(){
 				ele.addClass("show");
-			},5000)
+			},3000)
 
 			ele.on("click",function(){
 				ele.find("span").toggleClass("icon-play3").toggleClass("icon-stop2").toggleClass("margin-left")

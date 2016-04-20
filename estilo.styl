@@ -16,10 +16,10 @@ amarillo = #FFFEC8
 .cuadrado
 	width 10%
 	//display none
+	margin 10px
 	transition 2s
 	&.rotar
-		transform rotate(360deg)
-		margin 5px
+		margin 0px
 	&:after
 		content ""
 		padding-top 100%
@@ -53,6 +53,16 @@ body
 	position relative
 	&.startLatido
 		animation latido 2s infinite
+	&-Titulo
+		font-family: 'Amaranth', sans-serif
+		font-size 30px
+		margin-bottom 0px
+		width 60%
+		transition 2s
+		text-align center
+		&.activo
+			margin-bottom 90px
+			
 	&-Play
 		outline none
 		margin-top 30px
