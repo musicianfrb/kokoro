@@ -43,13 +43,16 @@ modulo.directive("rotacion",function($timeout){
 modulo.directive("latido",function($timeout){
 	return{
 		link:function(scope,ele,attrs){
-			$timeout(function(){
+			/*$timeout(function(){
 				ele.addClass("show");
-			},3000)
+			},3000)*/
+			$timeout(function(){
+				$(".Corazon").toggleClass("startLatido")
+			},3100)
 
 			ele.on("click",function(){
 				ele.find("span").toggleClass("icon-play3").toggleClass("icon-stop2").toggleClass("margin-left")
-				$(".Corazon").toggleClass("startLatido")
+				
 			})
 		}
 	}
